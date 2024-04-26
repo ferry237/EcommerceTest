@@ -1,0 +1,20 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+ 
+:root {
+    font-size: 10px;
+    --font-Figtree: 'Figtree', sans-serif
+}
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+   
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
