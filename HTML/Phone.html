@@ -3,9 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/CSS_JS/tailwind.config.js"></script>
+    <link rel="stylesheet" href="/CSS_JS/index.css">
     <title>Document</title>
 </head>
 <body>
-    <p>bonjour phone</p>
+    <header class="flex flex-col w-full lg:h-[15rem] h-[9rem] ">
+        <nav class=" flex flex-row w-full lg:h-[65%] h-full  items-center justify-between lg:px-[10rem] px-[2rem] gap-[4rem] ">
+            <img src="/Items/images/logo.svg" alt="" class="w-[30rem] lg:block hidden">
+            <img src="/Items/images/images_phones/Logo.svg" alt="" class="lg:hidden block">
+            <button><img src="/Items/icones/icones_phones/Burger.svg" alt="" class="lg:hidden block "></button>
+            <div class="lg:block hidden lg:flex lg:flex-row  lg:w-[60rem] lg:h-[50%] items-center rounded-lg  bg-search_col px-[1rem] py-[0.5rem] gap-[1rem]">
+                <img src="/Items/icones/icon_loupe.svg" alt="" class="h-[2rem] w-[2.4rem] h-[2.4rem]">
+                <input type="text" placeholder="Search" class="h-full w-full bg-transparent px-[0.3rem] text-[1.4rem]">
+            </div>
+            <ul class="lg:flex lg:flex-row text-[2rem] gap-[5.2rem] lg:block hidden">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+            <div class=" lg:flex lg:flex-row gap-[5.2rem] lg:block hidden">
+                <img src="/Items/icones/icon_coeur.svg" alt="">
+                <img src="/Items/icones/icon_pagnier.svg" alt="">
+                <img src="/Items/icones/icon_bonhom.svg" alt="">
+            </div>
+            
+
+        </nav>
+        <nav class="lg:block hidden bg-nav2_bg w-full h-[35%] px-[6rem] lg:flex lg:flex-row justify-center items-center">
+            <div class="w-[16%] h-[60%] border-r-[0.1rem] border-white flex flex-row justify-center ">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                     <img src="/Items/icones/icon_phone.svg" alt="">
+                     <p class="text-[2rem] text-white">Phones</p>
+                </a>
+            </div>
+            <div class="w-[16%] h-[60%] border-r-[0.1rem] border-white flex flex-row justify-center">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                    <img src="/Items/icones/icon_comput.svg" alt="">
+                    <p class="text-[2rem] text-white">Computers</p>
+               </a>
+            </div>
+            <div class="w-[16%] h-[60%] border-r-[0.1rem] border-white flex flex-row justify-center">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                    <img src="/Items/icones/icon_smartwacht.svg" alt="">
+                    <p class="text-[2rem] text-white">Smart Watches</p>
+               </a>
+            </div>
+            <div class="w-[16%] h-[60%] border-r-[0.1rem] border-white flex flex-row justify-center">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                    <img src="/Items/icones/icon_camera.svg" alt="">
+                    <p class="text-[2rem] text-white">Cameras</p>
+               </a>
+            </div>
+            <div class="w-[16%] h-[60%] border-r-[0.1rem] border-white flex flex-row justify-center">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                    <img src="/Items/icones/icon_headphone.svg" alt="">
+                    <p class="text-[2rem] text-white">Headphones</p>
+               </a>
+            </div>
+            <div class="w-[16%] h-[60%] flex flex-row justify-center">
+                <a href="" class="flex flex-row items-center gap-[1rem]">
+                    <img src="/Items/icones/icon_smartwacht.svg" alt="">
+                    <p class="text-[2rem] text-white">Gaming</p>
+               </a>
+            </div>
+        </nav>
+    </header>
+    <section class="w-full h-[10rem]  flex flex-row  items-center px-[20rem] text-[1.6rem]">
+        <ul class="flex flex-row gap-[3rem] text-blanch_2">
+            <li><a href="/HTML/index.html" class="flex flex-row gap-[1rem]">Home <img src="/items2/fleche_D.svg" alt="" class="block"></a></li>
+            <li><a href="" class="flex flex-row gap-[1rem]">catalog <img src="/items2/fleche_D.svg" alt="" class="block"></a></li>
+            <li><a href="" class="flex flex-row gap-[1rem] text-black">Smartphones <img src="/items2/fleche_D.svg" alt="" class="hidden"></a></li>
+        </ul>
+    </section>
+    <section class="w-full h-[210rem] flex flex-row px-[19rem] gap-[2rem]">
+         <div class="w-[25%] h-full  px-[1rem] flex flex-col gap-[2.4rem]">
+             
+                <button onclick="dropdown('div1','img_flb1','img_flh1')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Price
+                    <img src="/items2/fleche_b.svg" id="img_flb1" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh1" alt="" class="hidden">
+                </button>
+                <div id="div1" class="hidden transition-opacity duration-100 flex flex-col">
+                    <form class="flex flex-row w-full h-[10rem] justify-between items-center ">
+                        <div class=" w-[40%] h-full  flex flex-col">
+                            <label for="From" class="text-[1.4rem] text-blanch_2">From</label>
+                            <input type="text" placeholder="1 299" class="w-full h-[55%] rounded-[0.5rem] border-br_inputcol border-[0.2rem] text-[1.4rem]">
+                        </div>
+                       <div class=" w-[40%] h-full  flex flex-col">
+                            <label for="From" class="text-[1.4rem] self-end text-blanch_2">To</label>
+                            <input type="text" placeholder="1 299" class="w-full h-[55%] rounded-[0.5rem] border-br_inputcol border-[0.2rem] text-[1.4rem]">
+                       </div>
+                     
+                    </form>
+                    <div>
+                        <div class="w-full h-[0.5rem] bg-black "></div>
+                    </div>
+                </div>
+                <button onclick="dropdown('div2','img_flb2','img_flh2')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Brand
+                    <img src="/items2/fleche_b.svg" id="img_flb2" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh2" alt="" class="hidden">
+                </button>
+                <div id="div2" class=" hidden transition-opacity duration-100 gap-[2.4rem] flex flex-col ">
+                    <div class="lg:block hidden lg:flex lg:flex-row  w-[90%] h-[4.9rem] items-center rounded-lg  bg-search_col px-[1rem] py-[0.5rem] gap-[1rem]">
+                        <img src="/Items/icones/icon_loupe.svg" alt="" class="h-[2rem] w-[2.4rem] h-[2.4rem]">
+                        <input type="text" placeholder="Search" class="h-full w-full bg-transparent px-[0.3rem] text-[1.4rem]">
+                    </div>
+                    <div class="w-full h-[49rem] overflow-y-scroll">
+                        <ul class="flex flex-col gap-[4rem]" id="elmts1">
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Apple <span class="text-[1.2rem] text-numbcol">110</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Samsung<span class="text-[1.2rem] text-numbcol">125</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Xiaomi<span class="text-[1.2rem] text-numbcol">68</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Poco<span class="text-[1.2rem] text-numbcol">44</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">OPPO<span class="text-[1.2rem] text-numbcol">36</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Honor<span class="text-[1.2rem] text-numbcol">10</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Motorola<span class="text-[1.2rem] text-numbcol">34</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Nokia<span class="text-[1.2rem] text-numbcol">22</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">Realme<span class="text-[1.2rem] text-numbcol">35</span></p>
+                            </li>
+                           
+                          </ul>
+                    </div>
+                 
+                </div>
+                <button onclick="dropdown('div3','img_flb3','img_flh3')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Built-in memory
+                    <img src="/items2/fleche_b.svg" id="img_flb3" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh3" alt="" class="hidden">
+                </button>
+                <div id="div3" class=" hidden transition-opacity d gap-[2.4rem] flex flex-col">
+                    <div class="lg:block hidden lg:flex lg:flex-row  w-[90%] h-[4.9rem] items-center rounded-lg  bg-search_col px-[1rem] py-[0.5rem] gap-[1rem]">
+                        <img src="/Items/icones/icon_loupe.svg" alt="" class="h-[2rem] w-[2.4rem] h-[2.4rem]">
+                        <input type="text" placeholder="Search" class="h-full w-full bg-transparent px-[0.3rem] text-[1.4rem]">
+                    </div>
+                    <div class="w-full h-[20rem]">
+                        <ul class="flex flex-col gap-[4rem]  " id="elmts1">
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">16GB <span class="text-[1.2rem] text-numbcol">65</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">32GB<span class="text-[1.2rem] text-numbcol">123</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">64GB<span class="text-[1.2rem] text-numbcol">48</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">128GB<span class="text-[1.2rem] text-numbcol">50</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">256GB<span class="text-[1.2rem] text-numbcol">24</span></p>
+                            </li>
+                            <li class="flex flex-row gap-[0.5rem]">
+                               
+                                <img src="/items2/nocheck.svg" alt="" id="nocheck">
+                                <p class="text-black text-[1.5rem] font-normal">512GB<span class="text-[1.2rem] text-numbcol">8</span></p>
+                            </li> 
+                          </ul>
+                    </div>
+                  
+                </div>
+                <button onclick="dropdown('div4','img_flb4','img_flh4')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Protection class
+                    <img src="/items2/fleche_b.svg" id="img_flb4" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh4" alt="" class="hidden">
+                </button>
+                <div id="div4" class="bg-s1_bgcolor hidden transition-opacity duration-100 ">
+                  <ul class="flex flex-col gap-[4rem]">
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                  </ul>
+                </div>
+                <button onclick="dropdown('div5','img_flb5','img_flh5')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Screen diagonal
+                    <img src="/items2/fleche_b.svg" id="img_flb5" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh5" alt="" class="hidden">
+                </button>
+                <div id="div5" class="bg-s1_bgcolor hidden transition-opacity duration-100 ">
+                  <ul class="flex flex-col gap-[4rem]">
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                  </ul>
+                </div>
+                <button onclick="dropdown('div6','img_flb6','img_flh6')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Screen type
+                    <img src="/items2/fleche_b.svg" id="img_flb6" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh6" alt="" class="hidden">
+                </button>
+                <div id="div6" class="bg-s1_bgcolor hidden transition-opacity duration-100 ">
+                  <ul class="flex flex-col gap-[4rem]">
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                  </ul>
+                </div>
+                <button onclick="dropdown('div7','img_flb7','img_flh7')" id="button_dropdown" class="w-full h-[5rem] text-start  border-b-[0.1rem] flex flex-row items-center justify-between text-[1.8rem]">
+                    Battery capacity
+                    <img src="/items2/fleche_b.svg" id="img_flb7" alt="" class="">
+                    <img src="/items2/fleche_h.svg" id="img_flh7" alt="" class="hidden">
+                </button>
+                <div id="div7" class="bg-s1_bgcolor hidden transition-opacity duration-100 ">
+                  <ul class="flex flex-col gap-[4rem]">
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                    <li>ddddd</li>
+                  </ul>
+                </div>
+         </div>
+         <div class="w-[75%] h-full flex flex-col gap-[2rem]">
+            <div class="w-full h-[5%] flex flex-row items-center justify-between">
+               <p class="text-text_col text-[1.6rem]">Selected Products: <span class="text-black text-[2rem]">85</span></p>
+               <div class=" flex flex-row justify-between items-center h-[4rem] w-[30rem] px-[1rem] border-[0.1rem] rounded-[1rem] border-blanch_2">
+                  <p class="text-[1.6rem]">
+                    By rating
+                  </p>
+                  <button onclick="dropdown('div8','img_flb8','img_flh8')" id="button_dropdown"  class="">
+                     <img src="/items2/flbg.svg" id="img_flb8" alt="">
+                     <img src="/items2/fleche_h.svg" id="img_flh8" alt="" class="hidden">
+                  </button>
+                  <div id="div8" class="bg-s1_bgcolor hidden transition-opacity duration-100 ">
+                    <ul class="flex flex-col gap-[4rem]">
+                      <li>ddddd</li>
+                      <li>ddddd</li>
+                      <li>ddddd</li>
+                      <li>ddddd</li>
+                      <li>ddddd</li>
+                    </ul>
+                  </div>
+               </div>
+            </div>
+            <div class=" w-full h-[90%] grid lg:grid-cols-3 grid-cols-2 gap-[1.6rem] lg:flex-nowrap flex-wrap">
+            
+                <div class="lg:h-[60rem] h-[40rem]  w-[100%] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full ">
+                         <img src="/Items/icones/icon_coeur.svg" alt="">
+                    </div>
+                    <div class="lg:h-[60%] h-[46%] w-full flex justify-center items-center  ">
+                        <img src="/Items/images/Iphone 14 pro 1 (1).svg" alt="" class="w-[90%]">
+                    </div>
+                    <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col  items-center justify-between gap-[1rem] ">
+                        <p class="text-[1.6rem] text-center lg:block ">Apple iPhone 14 Pro 512GB Gold (MQ233)</p>
+                        <p class="text-[2.4rem]  font-semibold">$1437</p>
+                    </div>
+                   
+                    <button class="lg:w-[80%] w-full lg:h-[6rem] h-[5rem] bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem]  bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%] w-full flex justify-center items-center ">
+                       <img src="/items2/Iphone 14 pro 1 (3).svg" alt="" class="lg:w-[90%] w-full">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col items-center justify-between gap-[1rem]">
+                    <p class="text-[1.6rem] text-center">Apple iPhone 11 128GB White (MQ233)</p>
+                    <p class="text-[2.4rem] font-semibold">$510</p>
+                   </div>
+                   <button class="lg:w-[80%] w-full lg:h-[6rem] h-[5rem]  bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/items2/Iphone 14 pro 1 (3).svg" alt="" class="lg:w-[90%] w-full">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col items-center justify-between gap-[1rem]">
+                         <p class="text-[1.6rem] text-center block">Apple iPhone 11 128GB White (MQ233)</p>
+                         <p class="text-[2.4rem] font-semibold ">$550</p>
+                   </div>
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem] bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/Items/images/Iphone 14 pro 1 (2).svg" alt="" class="w-[90%]">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem]  flex flex-col items-center gap-[1rem] justify-between">
+                    <p class="text-[1.6rem] text-center">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</p>
+                    <p class="text-[2.4rem] font-semibold">$1499</p>
+                   </div>
+                   
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem]  bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/Items/images/Iphone 14 pro 1 (1).svg" alt="" class="w-[90%]">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col items-center justify-between gap-[1rem]">
+                         <p class="text-[1.6rem] text-center">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</p>
+                         <p class="text-[2.4rem] font-semibold ">$1399</p>
+                   </div>
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem] bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                        <img src="/Items/images/Iphone 14 pro 1.svg" alt="" class="lg:w-[90%] w-full">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem]  flex flex-col items-center gap-[1rem] justify-between">
+                    <p class="text-[1.6rem] text-center block">Apple iPhone 14 Pro 128GB Deep Purple (MQ0G3)</p>
+                    <!--<p class="text-[1.6rem] text-center lg:hidden block">Apple Watch Series 9 GPS 41mm Sta...</p>-->
+                    <p class="text-[2.4rem] font-semibold">$1600</p>
+                   </div>
+                   
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem]  bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/couer_rouge.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/items2/Iphone 14 pro 1 (5).svg" alt="" class="lg:w-[90%] w-[98%]">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem]  flex flex-col items-center gap-[1rem] justify-between">
+                    <p class="text-[1.6rem] text-center">Apple iPhone 14 Pro 128GB Deep Purple (MQ0G3)</p>
+                    <p class="text-[2.4rem] font-semibold">$850</p>
+                   </div>
+                   
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem]  bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/items2/Iphone 14 pro 1 (4).svg" alt="" class="lg:w-[90%] w-full">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col items-center justify-between gap-[1rem]">
+                         <p class="text-[1.6rem] text-center block ">Apple iPhone 14 Pro 256GB Space Black (MQ0T3)</p>
+                         <!--<p class="text-[1.6rem] text-center lg:hidden block">Apple iPad 9 10.2" 64GB Wi-Fi Silv...</p>-->
+                         <p class="text-[2.4rem] font-semibold ">$1399</p>
+                   </div>
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem] bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+                <div class="lg:h-[60rem]   h-[40rem] bg-bg_gris p-[2rem] rounded-[0.9rem] flex flex-col items-center lg:gap-[1rem]">
+                    <div class="flex justify-end w-full">
+                        <img src="/Items/icones/icon_coeur.svg" alt="">
+                   </div>
+                   <div class="lg:h-[60%] h-[46%]  w-full flex justify-center items-center">
+                       <img src="/Items/images/Iphone 14 pro 1 (2).svg" alt="" class="w-[90%]">
+                   </div>
+                   <div class="w-full lg:h-[10.4rem] h-[13rem] flex flex-col items-center justify-between gap-[1rem]">
+                         <p class="text-[1.6rem] text-center block ">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</p>
+                         <!-- <p class="text-[1.6rem] text-center lg:hidden block">Apple iPad 9 10.2" 64GB Wi-Fi Silv...</p>-->
+                         <p class="text-[2.4rem] font-semibold ">$1399</p>
+                   </div>
+                   <button class="lg:w-[80%] w-full  lg:h-[6rem] h-[5rem] bg-black text-white text-[1.4rem] font-medium rounded-[0.8rem]"> Buy Now</button>
+                </div>
+
+           </div>
+           <div class="w-full h-[5%]  flex items-center justify-center gap-[1rem]">
+               <button>
+                 <img src="/items2/fleche_gauche.svg" alt="">
+               </button>
+               <div class="w-[23rem] h-[4rem] flex flex-row gap-[0.8rem]">
+                    <div class="w-[4rem] h-[4rem] bg-black rounded-[0.5rem] text-white flex justify-center items-center text-[1.6rem]"><p>1</p></div>
+                    <div class="w-[4rem] h-[4rem] bg-bg_gris rounded-[0.5rem] text-black flex justify-center items-center text-[1.6rem]"><p>2</p></div>
+                    <div class="w-[4rem] h-[4rem] bg-bg_gris rounded-[0.5rem] text-black flex justify-center items-center text-[1.6rem]"><p>3</p></div>
+                    <div class="w-[4rem] h-[4rem] bg-bg_gris rounded-[0.5rem] flex items-end justify-center"><img src="/items2/3points.svg" alt="" class="w-[70%]"></div>
+                    <div class="w-[4rem] h-[4rem] bg-bg_gris rounded-[0.5rem] text-black flex justify-center items-center text-[1.6rem]"><p>12</p></div>
+               </div>
+               <button>
+                 <img src="/items2/Arrow.svg" alt="">
+               </button>
+           </div>
+
+
+        </div>
+             
+        
+    </section>
+    <footer class=" w-full lg:h-[60rem] h-[90rem] lg:bg-black bg-noir_f flex  flex-col text-white justify-center lg:px-[20rem] px-[2rem]">
+        <div class=" w-full lg:h-[63%] h-[90%] flex lg:flex-row flex-col justify-center items-center lg:gap-[10rem] ">
+         <div class="lg:h-full h-[29rem] lg:w-[40rem] w-full  lg:items-start items-center flex flex-col lg:gap-[2rem]">
+            <img src="/Items/images/Logo Vector.svg" alt="" class="w-[10rem] h-[10rem]">
+            <p class="text-white text-[1.4rem] lg:text-start text-center">We are a residential interior design firm located in Portland. Our boutique-studio offers more than</p>
+         </div>
+         <div class="lg:h-full h-[60rem] lg:w-[40rem] w-full lg:items-start items-center flex flex-col gap-[2rem]">
+            <h2 class="text-[1.6rem] font-medium">Services</h2>
+            <p class="text-[1.4rem] text-blanch_2 flex flex-col gap-[2rem] lg:text-start text-center">
+                <span>Bonus </span>
+                <span> programGift </span>
+                <span>cardsCredit and paymentService </span> 
+                <span>contractsNon-cash </span> 
+                <span> account</span> 
+                <span> Payment</span>
+            </p>
+         </div>
+         <div class="lg:h-full h-[60rem] lg:w-[40rem] w-full flex flex-col gap-[2rem] lg:items-start items-center">
+            <h2 class="text-[1.6rem] font-medium">Assistance to the buyer</h2>
+            <p class="text-[1.4rem] text-blanch_2 flex flex-col gap-[2rem] lg:text-start text-center">
+                <span>Find an order</span>
+                <span>Terms of delivery</span>
+                <span>Exchange and return of goods</span>
+                <span>Guarantee</span>
+                <span>Frequently asked questions</span>
+                <span>Terms of use of the site</span>
+            </p>
+         </div>
+          </div>
+          <div class="lg:w-[27rem] w-full h-[5rem] px-[5rem] flex flex-row  gap-[3rem] lg:justify-start justify-center">
+              <a href="">
+                <img src="/Items/icones/Twitter.svg" alt="">
+              </a>
+              <a href="">
+                <img src="/Items/icones/facebook.svg" alt="">
+              </a>
+              <a href="">
+                <img src="/Items/icones/tiktok.svg" alt="">
+              </a>
+              <a href="">
+                <img src="/Items/icones/Instagram.svg" alt="">
+              </a>
+          </div>
+        </footer>
+        <script src="/CSS_JS/js_deuxieme_page/index.js">
+            
+        </script>
 </body>
 </html>

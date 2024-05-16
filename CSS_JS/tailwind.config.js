@@ -17,7 +17,10 @@ tailwind.config= {
          blanch_2:'#CFCFCF',
          bl:'#00FFFF',
          noir_f:'#181313',
-         
+         br_inputcol:'#9F9F9F',
+         numbcol:'#929292',
+         text_col:'#6C6C6C'
+
         },
       }
     }
